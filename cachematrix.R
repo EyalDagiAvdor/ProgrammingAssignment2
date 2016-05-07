@@ -4,7 +4,7 @@
 ## calculation.
 
 ##Define cache inverse matrix interface by creating a list containing functions to 
-##1.set the value of the matrix
+##1. set the value of the matrix
 ##2. get the value of the matrix, 
 ##3. set the value of the inverse
 ##4. get the value of the inverse.
@@ -22,10 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
     list(set = set, get = get,
          setinverse = setinverse,
          getinverse = getinverse)
-    
-
 }
-
 
 ## Return the inverse matrix. First check it current inverse is
 ## cached, if yes return it, otherwise calculate the invesre, update the
@@ -43,4 +40,3 @@ cacheSolve <- function(x, ...) {
     x$setinverse(i)
     i
 }
-
